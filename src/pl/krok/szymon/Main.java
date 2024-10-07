@@ -1,4 +1,5 @@
 package pl.krok.szymon;
+
 public class Main {
     public static void main(String[] args) {
         char[][] board = {{'X','X','X'},
