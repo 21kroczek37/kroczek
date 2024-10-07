@@ -16,8 +16,6 @@ public class Main {
 			return;
 		}
 
-		
-
 		switch (liczba) {
 		case 0:
 			System.out.println("Wybrano 0");
@@ -25,9 +23,49 @@ public class Main {
 		case 1:
 			System.out.println("Hello World");
 			break;
-
+		case 3:
+			calc();
 		}
 
-		scanner.close();
 	}
+
+	private static void calc() {
+		int pierwszaliczba;
+		int drugaliczba;
+		int znak = 0;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Podaj pierwsz¹ liczbê:");
+		pierwszaliczba = scanner.nextInt();
+		System.out.println("Podaj drug¹ liczbê");
+		drugaliczba = scanner.nextInt();
+
+		System.out.println("dodawanie, wcisnij 1");
+		System.out.println("odejmowanie, wcisnij 2");
+		System.out.println("mno¿enie, wcisnij 3");
+		System.out.println("dzielenie, wcisnij 4");
+		znak = scanner.nextInt();
+		switch (znak) {
+
+		case 1: {
+			System.out.println(pierwszaliczba + drugaliczba);
+			break;
+		}
+		case 2: {
+			System.out.println(pierwszaliczba - drugaliczba);
+			break;
+		}
+		case 3: {
+			System.out.println(pierwszaliczba * drugaliczba);
+			break;
+		}
+		case 4: {
+			if (drugaliczba != 0) {
+				System.out.println(pierwszaliczba / drugaliczba + "  oraz reszty: " + pierwszaliczba % drugaliczba);
+			} else {
+				System.out.println("Nie dzielimy przez zero!!!");
+			}
+			break;
+		}
+		}
+		scanner.close(); }
 }
