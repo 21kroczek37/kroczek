@@ -62,8 +62,7 @@ public class Main {
 		}
 		System.out.println("Naciœnij Enter, aby przejœæ do drugiej tablicy...");
 		scanner.nextLine();
-		System.out
-				.println("WprowadŸ liczby do drugiej tablicy (naciœnij Enter bez podawania wartoœci, aby zakoñczyæ):");
+		System.out.println("WprowadŸ liczby do drugiej tablicy (naciœnij Enter bez podawania wartoœci, aby zakoñczyæ):");
 		while (true) {
 			String input = scanner.nextLine();
 			if (input.isEmpty()) {
