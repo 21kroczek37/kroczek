@@ -1,5 +1,7 @@
 package pl.krok.szymon;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -30,11 +32,58 @@ public class Main {
 
 		case 3:
 			calc();
+			break;
 		case 4:
 			getPalindrome();
 			break;
+		case 5:
+			addingArrays();
+			break;
 		}
 
+	}
+
+	private static void addingArrays() {
+		Scanner scanner = new Scanner(System.in);
+		List<Integer> tabela1 = new ArrayList<>();
+		List<Integer> tabela2 = new ArrayList<>();
+		System.out.println(
+				"WprowadŸ liczby do pierwszej tablicy (naciœnij Enter bez podawania wartoœci, aby zakoñczyæ):");
+		while (true) {
+			String input = scanner.nextLine();
+			if (input.isEmpty()) {
+				break;
+			}
+			try {
+				tabela1.add(Integer.parseInt(input));
+			} catch (NumberFormatException e) {
+				System.out.println("Proszê wpisaæ prawid³ow¹ liczbê.");
+			}
+		}
+		System.out.println("Naciœnij Enter, aby przejœæ do drugiej tablicy...");
+		scanner.nextLine();
+		System.out.println("WprowadŸ liczby do drugiej tablicy (naciœnij Enter bez podawania wartoœci, aby zakoñczyæ):");
+		while (true) {
+			String input = scanner.nextLine();
+			if (input.isEmpty()) {
+				break;
+			}
+			try {
+				tabela2.add(Integer.parseInt(input));
+			} catch (NumberFormatException e) {
+				System.out.println("Proszê wpisaæ prawid³ow¹ liczbê.");
+			}
+		}
+		int maxLength = Math.min(tabela1.size(), tabela2.size());
+		List<Integer> wynik = new ArrayList<>();
+		for (int i = 0; i < maxLength; i++) {
+			wynik.add(tabela1.get(i) + tabela2.get(i));
+		}
+		System.out.print("Wynik dodawania: ");
+		for (int liczba : wynik) {
+			System.out.print(liczba + " ");
+		}
+		scanner.close();
 	}
 
 	private static void getPalindrome() {
