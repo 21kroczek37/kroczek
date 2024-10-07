@@ -30,13 +30,47 @@ public class Main {
 
 		case 3:
 			calc();
+		case 4:
+			getPalindrome();
+			break;
 		}
 
 	}
 
+	private static void getPalindrome() {
+		System.out.println("podaj zdanie, sprawdzimy czy jest palindromem");
+		Scanner scanner = new Scanner(System.in);
+
+		while (scanner.hasNext()) {
+			String sentence = scanner.nextLine();
+			if (sentence.equals("koniec")) {
+				break;
+			}
+			boolean getPalindrome = true;
+			for (int i = 0; i < sentence.length() / 2; i++) {
+				char currentChar = sentence.charAt(i);
+				char otherChar = sentence.charAt(sentence.length() - i - 1);
+
+				if (currentChar != otherChar) {
+
+					getPalindrome = false;
+					break;
+				}
+			}
+			if (getPalindrome) {
+				System.out.println("przekazane zdanie  " + sentence + "  jest palindromem");
+			} else {
+				System.out.println("przekazane zdanie  " + sentence + "  nie jest palindromem");
+
+			}
+			System.out.println("podaj kolejne zdanie do sprawdzenia ");
+
+		}
+	}
+
 	private static void helloWorld() {
 		System.out.println("hello world");
-		
+
 	}
 
 	private static void zgadnijLiczbe() {
@@ -102,5 +136,6 @@ public class Main {
 			break;
 		}
 		}
-		scanner.close(); }
+		scanner.close();
+	}
 }
