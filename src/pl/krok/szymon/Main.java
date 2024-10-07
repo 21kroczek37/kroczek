@@ -22,10 +22,10 @@ public class Main {
 			System.out.println("Wybrano 0");
 			break;
 		case 1:
-			System.out.println("Hello World");
+			helloWorld();
 			break;
 		case 2:
-			ZgadnijLiczbe();
+			zgadnijLiczbe();
 			break;
 
 		}
@@ -33,7 +33,12 @@ public class Main {
 		scanner.close();
 	}
 
-	private static void ZgadnijLiczbe() {
+	private static void helloWorld() {
+		System.out.println("hello world");
+		
+	}
+
+	private static void zgadnijLiczbe() {
 
 		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
