@@ -44,17 +44,14 @@ public class Main {
 	}
 
 	private static void addingArrays() {
-
 		Scanner scanner = new Scanner(System.in);
-
 		List<Integer> tabela1 = new ArrayList<>();
 		List<Integer> tabela2 = new ArrayList<>();
-
 		System.out.println(
 				"WprowadŸ liczby do pierwszej tablicy (naciœnij Enter bez podawania wartoœci, aby zakoñczyæ):");
 		while (true) {
 			String input = scanner.nextLine();
-			if (input.isEmpty()) { 
+			if (input.isEmpty()) {
 				break;
 			}
 			try {
@@ -63,15 +60,13 @@ public class Main {
 				System.out.println("Proszê wpisaæ prawid³ow¹ liczbê.");
 			}
 		}
-
 		System.out.println("Naciœnij Enter, aby przejœæ do drugiej tablicy...");
 		scanner.nextLine();
-
 		System.out
 				.println("WprowadŸ liczby do drugiej tablicy (naciœnij Enter bez podawania wartoœci, aby zakoñczyæ):");
 		while (true) {
 			String input = scanner.nextLine();
-			if (input.isEmpty()) { 
+			if (input.isEmpty()) {
 				break;
 			}
 			try {
@@ -80,23 +75,17 @@ public class Main {
 				System.out.println("Proszê wpisaæ prawid³ow¹ liczbê.");
 			}
 		}
-
 		int maxLength = Math.min(tabela1.size(), tabela2.size());
 		List<Integer> wynik = new ArrayList<>();
-
 		for (int i = 0; i < maxLength; i++) {
 			wynik.add(tabela1.get(i) + tabela2.get(i));
 		}
-
 		System.out.print("Wynik dodawania: ");
 		for (int liczba : wynik) {
 			System.out.print(liczba + " ");
 		}
-
 		scanner.close();
 	}
-
-	
 
 	private static void getPalindrome() {
 		System.out.println("podaj zdanie, sprawdzimy czy jest palindromem");
