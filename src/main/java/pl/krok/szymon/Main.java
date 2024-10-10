@@ -1,4 +1,4 @@
-package pl.krok.szymon;
+package main.java.pl.krok.szymon;
 
 import java.util.ArrayList;
 import java.util.List;

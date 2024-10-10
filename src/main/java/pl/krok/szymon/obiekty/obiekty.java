@@ -1,4 +1,4 @@
-package pl.krok.szymon.obiekty;
+package main.java.pl.krok.szymon.obiekty;
 
 public class obiekty {
 	public static void main(String[] args) {

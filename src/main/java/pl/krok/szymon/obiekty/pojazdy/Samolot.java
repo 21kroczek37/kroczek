@@ -1,11 +1,11 @@
-package pl.krok.szymon.obiekty.pojazdy;
+package main.java.pl.krok.szymon.obiekty.pojazdy;
 
 class Samolot extends Pojazd {
 	private String model;
 	private int iloscPasazerow;
 
 	public Samolot(String typ, int iloscSilnikow, String model, int iloscPasazerow) {
-		super(typ, iloscSilnikow);
+		super(typ, model);
 		this.model = model;
 		this.iloscPasazerow = iloscPasazerow;
 	}
